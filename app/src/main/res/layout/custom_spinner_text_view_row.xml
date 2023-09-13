@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customSpinnerDayOfTheWeekTextViewId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="5dp"
+    android:text="@string/custom_spinner_text_view"
+    android:textSize="30sp"
+    android:textStyle="bold" />

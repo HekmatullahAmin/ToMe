@@ -1,0 +1,166 @@
+<resources>
+    <string name="app_name">ToMe</string>
+    <!--    to do fragment -->
+    <string name="to_do_fragment_hello_to_user_text_view">Hello User</string>
+    <string name="to_do_fragment_all_tasks_count_text_view">0</string>
+    <string name="to_do_fragment_all_task_text_view">Task</string>
+    <string name="to_do_fragment_all_tasks_text_view">Tasks</string>
+    <string name="to_do_fragment_parts_of_the_day_text_view">Good morning</string>
+    <string name="to_do_fragment_today_text_view">Today</string>
+    <string name="to_do_fragment_today_tasks_count_text_view">0</string>
+    <string name="to_do_fragment_shopping_text_view">Shopping</string>
+    <string name="to_do_fragment_shopping_tasks_count_text_view">0</string>
+    <string name="to_do_fragment_planned_text_view">Planned</string>
+    <string name="to_do_fragment_plans_count_text_view">0</string>
+    <string name="to_do_fragment_today_task_text_view">Task</string>
+    <string name="to_do_fragment_today_tasks_text_view">Tasks</string>
+    <string name="to_do_fragment_shopping_item_text_view">Item</string>
+    <string name="to_do_fragment_shopping_items_text_view">Items</string>
+    <string name="to_do_fragment_plan_for_today_text_view">Plan for today</string>
+    <string name="to_do_fragment_plans_for_today_text_view">Plans for today</string>
+    <!--    calculation fragment-->
+    <string name="calculation_fragment_you_will_get_textView">You will get</string>
+    <string name="calculation_fragment_total_income_textView">0</string>
+    <string name="calculation_fragment_you_will_give_textView">You will give</string>
+    <string name="calculation_fragment_total_loss_textView">0</string>
+    <string name="calculation_fragment_search_by_person_name_auto_complete_text_view">Search name</string>
+    <!--    time table fragment-->
+    <string name="time_table_fragment_click_day_of_the_week_text_view">Click day of the week</string>
+    <string name="time_table_fragment_add_schedule_textView">Add schedule</string>
+    <string name="time_table_fragment_saturday_button">SATURDAY</string>
+    <string name="time_table_fragment_sunday_button">SUNDAY</string>
+    <string name="time_table_fragment_monday_button">MONDAY</string>
+    <string name="time_table_fragment_tuesday_button">TUESDAY</string>
+    <string name="time_table_fragment_wednesday_button">WEDNESDAY</string>
+    <string name="time_table_fragment_thursday_button">THURSDAY</string>
+    <string name="time_table_fragment_friday_button">FRIDAY</string>
+    <!--    today activity-->
+    <string name="today_activity_tasks_count_text_view">0 tasks</string>
+    <string name="today_activity_today_text_view">Today</string>
+    <!--    shopping activity-->
+    <string name="shopping_activity_tasks_count_text_view">0 tasks</string>
+    <string name="shopping_activity_today_text_view">Shopping</string>
+    <!--    entries activity -->
+    <string name="entries_activity_from_date_text_view">FROM DATE</string>
+    <string name="entries_activity_to_date_text_view">TO DATE</string>
+    <string name="entries_activity_net_balance_text_view">Net balance</string>
+    <string name="entries_activity_net_balance_amount_text_view">0</string>
+    <string name="entries_activity_total_entries_text_view">Total entries</string>
+    <string name="entries_activity_total_entries_count_text_view">0</string>
+    <string name="entries_activity_filter_recycler_view_button">Filter</string>
+    <string name="entries_activity_clear_selected_dates_recycler_view_button">Clear</string>
+    <!--    add schedule activity-->
+    <string name="add_schedule_activity_select_day_of_the_week_text_view">Select day of the week</string>
+    <string name="add_schedule_activity_add_your_full_24_hour_routine_text_view">Add your full one day routine</string>
+    <string name="add_schedule_activity_from_text_view">From</string>
+    <string name="add_schedule_activity_from_time_text_view">6 : 00</string>
+    <string name="add_schedule_activity_to_text_view">To</string>
+    <string name="add_schedule_activity_to_time_text_view">8 : 00</string>
+    <string name="add_schedule_activity_write_your_activity_text_view">Write your activity here</string>
+    <string name="add_schedule_activity_write_your_activity_edit_text">ex : study, lunch, break etc.</string>
+    <string name="add_schedule_activity_add_time_and_activity_button">Add activity</string>
+    <string name="add_schedule_activity_add_day_of_the_week_to_schedule_button">Add Saturday</string>
+    <!--    settings activity-->
+    <string name="settings_activity_name_text_view">Name</string>
+    <string name="settings_activity_enter_name_edit_text">Enter your name here</string>
+    <string name="settings_activity_currency_text_view">Currency</string>
+    <string name="settings_activity_enter_currency_edit_text">Enter currency symbol here</string>
+    <string name="settings_activity_save_settings_button">Save</string>
+    <!--    planned activity-->
+    <string name="planned_activity_add_plan_button">Add plan</string>
+    <string name="planned_activity_plan_text_view">Plan</string>
+    <string name="planned_activity_type_plan_here_edit_text">Type your plan here</string>
+    <string name="planned_activity_date_text_view">Date</string>
+    <string name="planned_activity_pick_date_text_view">Pick a date</string>
+    <!--    all transactions activity-->
+    <string name="all_transactions_activity_transactions_text_view">All Transactions</string>
+    <string name="all_transactions_activity_total_spent_text_view">Total spent :</string>
+    <string name="all_transactions_activity_total_spent_amount_text_view">0</string>
+    <string name="all_transactions_activity_total_received_text_view">Total received: </string>
+    <string name="all_transactions_activity_total_received_amount_text_view">0</string>
+    <string name="all_transactions_activity_no_transactions_yet_text_view">No transactions yet</string>
+    <!--    archived activity-->
+    <string name="archived_activity_archived_entries_text_view">Archived Entries</string>
+    <string name="archived_activity_unarchive_entry_button">Export</string>
+    <string name="archived_activity_no_item_archived_text_view">No item archived</string>
+    <!--    custom task row-->
+    <string name="custom_task_row_your_notes_go_here_text_view">Your note goes here</string>
+    <!--    custom book row-->
+    <string name="custom_book_row_book_name_text_view">Book name</string>
+    <string name="custom_book_row_number_of_pages_of_book_text_view">Number of pages</string>
+    <string name="custom_book_row_number_of_pages_of_book_count_text_view">0/0</string>
+    <string name="custom_book_row_percentage_text_view">0%</string>
+    <!--    custom calculation row-->
+    <string name="custom_calculation_row_person_name_text_view">Name</string>
+    <string name="custom_calculation_row_from_person_you_will_get_amount_text_view">0</string>
+    <string name="custom_calculation_row_from_person_you_will_get_text_view">You will get</string>
+    <!--    custom entry row-->
+    <string name="custom_entry_row_date_and_time_text_view">Date</string>
+    <string name="custom_entry_row_item_name_text_view">Item name</string>
+    <string name="custom_entry_row_you_will_give_amount_column_text_view">You will give</string>
+    <string name="custom_entry_row_you_will_get_amount_column_text_view">You will get</string>
+    <!--    custom time table row-->
+    <string name="custom_time_table_row_my_activity_name_text_view">Activity name</string>
+    <string name="custom_time_table_row_my_activity_time_text_view">Time</string>
+    <!--    all transactions row-->
+    <string name="custom_all_transactions_row_from_person_name_text_view">Person name</string>
+    <string name="custom_all_transactions_row_money_amount_text_view">0</string>
+    <string name="custom_all_transactions_row_plus_or_minus_sign_text_view">+</string>
+    <!--    plan custom row-->
+    <string name="custom_plan_row_date_text_view">Date</string>
+    <string name="custom_plan_row_plan_note_text_view">Note</string>
+    <!--    custom rename dialog-->
+    <string name="custom_rename_dialog_rename_text_view">Rename</string>
+    <string name="custom_rename_dialog_type_name_edit_text">Type your name here</string>
+    <string name="custom_rename_dialog_submit_button">Submit</string>
+    <!--    custom delete dialog-->
+    <string name="custom_delete_dialog_title_text_view">Delete?</string>
+    <string name="custom_delete_dialog_message_text_view">Are you sure you want to delete this entry?</string>
+    <string name="custom_delete_dialog_cancel_button">Cancel</string>
+    <string name="custom_delete_dialog_delete_button">Delete</string>
+    <!--    menu time table fragment-->
+    <string name="time_table_fragment_menu_add_book_item">Add book</string>
+    <string name="time_table_fragment_menu_edit_schedule_item">Edit schedule</string>
+    <!--    menu budget control fragment-->
+    <string name="calculation_fragment_menu_all_transactions_item">All transactions</string>
+    <!--    menu to-do fragment-->
+    <string name="custom_todo_fragment_menu_settings_item">Settings</string>
+    <!--    menu entries activity -->
+    <string name="custom_entry_activity_menu_unarchive_item">Unarchive</string>
+    <string name="custom_entry_activity_menu_edit_item">Edit</string>
+    <!--    custom_spinner_text_view-->
+    <string name="custom_spinner_text_view">Saturday</string>
+    <!--    general strings-->
+    <string name="currency_symbol_text_view">$</string>
+    <!--    native advertise names-->
+    <string name="advertise_headline_text_view">Headline</string>
+    <string name="advertise_call_to_action_button">Call to action</string>
+    <string name="advertise_attribution_text_view">Ad</string>
+    <string name="advertise_advertiser_text_view">Advertiser</string>
+    <!--    bottom sheet for adding task and person-->
+    <string name="custom_add_task_bottom_sheet_dialog_title_text_view">Task</string>
+    <string name="custom_add_task_bottom_sheet_dialog_task_text_view">Type your task here</string>
+    <string name="custom_add_task_bottom_sheet_dialog_add_task_button">Add task</string>
+    <!--    bottom sheet for adding item-->
+    <string name="custom_add_item_bottom_sheet_dialog_title_text_view">Item</string>
+    <string name="custom_add_item_bottom_sheet_dialog_item_name_edit_text">Type your item name here</string>
+    <string name="custom_add_item_bottom_sheet_dialog_item_amount_edit_text">Type amount here</string>
+    <string name="custom_add_item_bottom_sheet_dialog_add_item_button">Add item</string>
+    <string name="custom_add_item_bottom_sheet_dialog_received_radio_button">Received</string>
+    <string name="custom_add_item_bottom_sheet_dialog_spent_radio_button">Spent</string>
+    <!--    bottom sheet for adding book-->
+    <string name="custom_add_book_bottom_sheet_dialog_title_text_view">Book</string>
+    <string name="custom_add_book_bottom_sheet_dialog_type_book_name_edit_text">Type book name here</string>
+    <string name="custom_add_book_bottom_sheet_dialog_type_total_number_of_book_pages_edit_text">Type total No. of book pages</string>
+    <string name="custom_add_book_bottom_sheet_dialog_add_book_button">Add book</string>
+
+    <string-array name="daysOfTheWeek">
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+</resources>

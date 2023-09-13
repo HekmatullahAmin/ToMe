@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customDeleteDialogCardViewId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:id="@+id/customDeleteDialogRelativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/customDeleteOrArchiveDialogTitleTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/custom_delete_dialog_title_text_view"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/customDeleteOrArchiveDialogMessageTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customDeleteOrArchiveDialogTitleTextViewId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/custom_delete_dialog_message_text_view"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/customDeleteOrArchiveDialogCancelButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customDeleteOrArchiveDialogMessageTextViewId"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@id/customDeleteOrArchiveDialogTitleTextViewId"
+            android:background="@color/green_2"
+            android:text="@string/custom_delete_dialog_cancel_button" />
+
+        <Button
+            android:id="@+id/customDeleteOrArchiveDialogDeleteOrArchiveItButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customDeleteOrArchiveDialogMessageTextViewId"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/customDeleteOrArchiveDialogTitleTextViewId"
+            android:background="@color/red_2"
+            android:text="@string/custom_delete_dialog_delete_button" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

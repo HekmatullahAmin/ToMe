@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    we can add Theme.AppCompat.Light.NoActionBar or Theme.MaterialComponents.NoActionBar -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="floatingActionButtonStyle">@style/FabShapeOverlayStyle</item>
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+    </style>
+
+    <!--    for putting divider in between menu items-->
+    <style name="PopupMenuListView" parent="@style/Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/colorAccent</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <!--    for making bottom sheet background transparent and completely visible it above keyboard-->
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="background">@android:color/transparent</item>
+    </style>
+    <!--    for bringing Fab to foreground-->
+    <style name="FabShapeOverlayStyle" parent="Widget.Design.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/FabShapeStyle</item>
+    </style>
+
+    <!--    for changing the shape of floating action button-->
+    <!--    cornerSize, cornerFamily-->
+    <style name="FabShapeStyle" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">0dp</item>
+    </style>
+
+    <!--    for having rounded alert dialog-->
+    <style name="MyRounded.MaterialComponents.MaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.CustomDialog.Rounded
+        </item>
+        <item name="colorSurface">@android:color/white</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CustomDialog.Rounded" parent="Theme.MaterialComponents">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <!--    for rating bar color-->
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/orange</item>
+    </style>
+
+    <style name="todoFragmentTopLinearLayoutTextViewStyle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="todoFragmentLowLinearLayoutTextViewStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="todoFragmentCardViewCornersStyle">
+        <item name="cardCornerRadius">20dp</item>
+    </style>
+
+    <style name="calculationFragmentMainLinearLayoutTextViewStyle">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="calculationFragmentCardViewCornersStyle">
+        <item name="cardCornerRadius">10dp</item>
+    </style>
+</resources>

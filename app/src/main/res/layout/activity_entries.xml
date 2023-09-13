@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entriesActivityWholeUIRelativeLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EntriesActivity">
+
+    <include
+        android:id="@+id/entriesActivityToolbarId"
+        layout="@layout/custom_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/entriesActivitySecondRelativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entriesActivityToolbarId"
+        android:background="@color/colorPrimary"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/entriesActivityInsideSecondRelativeLayoutCardViewId"
+            style="@style/calculationFragmentCardViewCornersStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:id="@+id/entriesActivityFirstLLInsideSecondRelativeLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/entriesActivitySecondLLInsideSecondRelativeLayoutId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/entriesActivityThirdLLInsideSecondRelativeLayoutId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/entriesActivityFromDateTextViewId"
+                            style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/entries_activity_from_date_text_view" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/custom_primary_dark_line" />
+
+                    <LinearLayout
+                        android:id="@+id/entriesActivityFourthLLInsideSecondRelativeLayoutId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/entriesActivityToDateTextViewId"
+                            style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/entries_activity_to_date_text_view"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/entriesActivityFifthLLInsideSecondRelativeLayoutId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/entriesActivityFilterRecyclerViewButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:text="@string/entries_activity_filter_recycler_view_button" />
+
+                    <Button
+                        android:id="@+id/entriesActivityClearSelectedDatesButtonId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorAccent"
+                        android:text="@string/entries_activity_clear_selected_dates_recycler_view_button" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/entriesActivitySixthLLUnderSecondRelativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entriesActivitySecondRelativeLayoutId"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/entriesActivityFirstVerticalLineImageViewId"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/custom_primary_dark_line" />
+
+        <RelativeLayout
+            android:id="@+id/entriesActivityThirdRelativeLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/entriesActivityNetBalanceTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/entries_activity_net_balance_text_view"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/entriesActivityCurrencySymbolTextViewId"
+                android:layout_toRightOf="@id/entriesActivityNetBalanceTextViewId">
+
+                <TextView
+                    android:id="@+id/entriesActivityNetBalanceAmountTextViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/entries_activity_net_balance_amount_text_view"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/entriesActivityCurrencySymbolTextViewId"
+                style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/currency_symbol_text_view" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/entriesActivityEightLLInsideFourthLinearLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/entriesActivityTotalEntriesTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/entries_activity_total_entries_text_view"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/entriesActivityTotalEntriesCountTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entriesActivitySecondRelativeLayoutId"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/entries_activity_total_entries_count_text_view"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/entriesActivitySecondVerticalLineImageViewId"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/custom_primary_dark_line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/entriesActivityUnderFourthLinearLayoutCardViewId"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/entriesActivitySixthLLUnderSecondRelativeLayoutId">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/entriesActivityRecyclerViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/entriesActivityAddEntryFloatingActionButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="1dp"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="40dp"
+        app:pressedTranslationZ="30dp"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+</RelativeLayout>

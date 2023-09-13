@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/customTimeTableMenuAddBookItemId"
+        android:title="@string/time_table_fragment_menu_add_book_item" />
+
+    <item
+        android:id="@+id/customTimeTableMenuEditScheduleItemId"
+        android:title="@string/time_table_fragment_menu_edit_schedule_item" />
+</menu>

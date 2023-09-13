@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customPersonRowMainUiRelativeLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/customPersonRowPersonNameTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/custom_calculation_row_person_name_text_view"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/customPersonRowCurrencySymbolTextViewId"
+        style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/customPersonRowPersonNameTextViewId"
+        android:layout_alignParentRight="true"
+        android:text="@string/currency_symbol_text_view" />
+
+    <TextView
+        android:id="@+id/customPersonRowFromPersonYouWillGetOrGiveAmountTextViewId"
+        style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/customPersonRowCurrencySymbolTextViewId"
+        android:layout_toRightOf="@id/customPersonRowPersonNameTextViewId"
+        android:gravity="right"
+        android:text="@string/custom_calculation_row_from_person_you_will_get_amount_text_view" />
+
+    <TextView
+        android:id="@+id/customPersonRowFromPersonYouWillGetOrGiveTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customPersonRowFromPersonYouWillGetOrGiveAmountTextViewId"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:text="@string/custom_calculation_row_from_person_you_will_get_text_view" />
+</RelativeLayout>

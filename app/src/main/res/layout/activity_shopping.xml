@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.ShoppingActivity">
+
+    <include
+        android:id="@+id/shoppingActivityToolbarId"
+        layout="@layout/custom_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/shoppingActivitySecondRelativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shoppingActivityToolbarId"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/shoppingActivityImageViewId"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/shopping" />
+
+        <TextView
+            android:id="@+id/shoppingActivityTasksCountTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/shoppingActivityTodayTextViewId"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/shoppingActivityImageViewId"
+            android:text="@string/shopping_activity_tasks_count_text_view"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/shoppingActivityTodayTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/shoppingActivityImageViewId"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/shoppingActivityImageViewId"
+            android:text="@string/shopping_activity_today_text_view"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shoppingActivityRecyclerViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shoppingActivityImageViewId"
+            android:layout_marginTop="20dp" />
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shoppingActivityAddItemFABId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="25dp"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="1dp"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="40dp"
+        app:pressedTranslationZ="30dp"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+</RelativeLayout>

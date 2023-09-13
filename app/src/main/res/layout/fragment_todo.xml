@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/todoFragmentWholeUIRelativeLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TodoFragment">
+
+    <include
+        android:id="@+id/todoFragmentToolbarId"
+        layout="@layout/custom_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/todoFragmentRelativeLayoutInsideWholeRelativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/todoFragmentToolbarId"
+        android:padding="40dp"
+        tools:context=".fragments.TodoFragment">
+
+        <LinearLayout
+            android:id="@+id/todoFragmentTopLinearLayoutId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/todoFragmentLLInsideTopLinearLayoutId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/todoFragmentHelloToUserTextViewId"
+                    style="@style/todoFragmentTopLinearLayoutTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to_do_fragment_hello_to_user_text_view" />
+
+                <LinearLayout
+                    style="@style/todoFragmentTopLinearLayoutTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/todoFragmentAllTasksCountTextViewId"
+                        style="@style/todoFragmentTopLinearLayoutTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/to_do_fragment_all_tasks_count_text_view" />
+
+                    <TextView
+                        android:id="@+id/todoFragmentAllTasksTextViewId"
+                        style="@style/todoFragmentTopLinearLayoutTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/to_do_fragment_all_task_text_view" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/todoFragmentPartsOfTheDayTextViewId"
+                    style="@style/todoFragmentTopLinearLayoutTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to_do_fragment_parts_of_the_day_text_view" />
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/todoFragmentProfilePictureCircleImageViewId"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/default_profile_picture"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="8dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/todoFragmentTopLinearLayoutId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp">
+
+            <LinearLayout
+                android:id="@+id/todoFragmentLowLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/todoFragmentTodayCardViewId"
+                    style="@style/todoFragmentCardViewCornersStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/todoFragmentTodayFirstLLInsideLowLinearLayoutId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/todoFragmentTodayImageViewId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/today" />
+
+                        <LinearLayout
+                            android:id="@+id/todoFragmentTodaySecondLLInsideLowLinearLayoutId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/todoFragmentTodayTextViewId"
+                                style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/to_do_fragment_today_text_view" />
+
+                            <LinearLayout
+                                android:id="@+id/todoFragmentTodayThirdLLInsideLowLinearLayoutId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/todoFragmentTodayTasksCountTextViewId"
+                                    style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/to_do_fragment_today_tasks_count_text_view" />
+
+                                <TextView
+                                    android:id="@+id/todoFragmentTodayTasksTextViewId"
+                                    style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/to_do_fragment_today_task_text_view" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/todoFragmentShoppingCardViewId"
+                    style="@style/todoFragmentCardViewCornersStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/todoFragmentShoppingFirstLLInsideLowLinearLayoutId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/todoFragmentShoppingImageViewId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/shopping" />
+
+                        <LinearLayout
+                            android:id="@+id/todoFragmentShoppingSecondLLInsideLowLinearLayoutId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/todoFragmentShoppingTextViewId"
+                                style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/to_do_fragment_shopping_text_view" />
+
+                            <LinearLayout
+                                android:id="@+id/todoFragmentShoppingThirdLLInsideLowLinearLayoutId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/todoFragmentShoppingTasksCountTextViewId"
+                                    style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/to_do_fragment_shopping_tasks_count_text_view" />
+
+                                <TextView
+                                    android:id="@+id/todoFragmentShoppingTasksTextViewId"
+                                    style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/to_do_fragment_shopping_item_text_view" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/todoFragmentPlannedCardViewId"
+                    style="@style/todoFragmentCardViewCornersStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary">
+
+                    <LinearLayout
+                        android:id="@+id/todoFragmentPlannedFirstLLInsideLowLinearLayoutId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/todoFragmentPlannedImageViewId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/planned" />
+
+                        <LinearLayout
+                            android:id="@+id/todoFragmentPlannedSecondLLInsideLowLinearLayoutId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/todoFragmentPlannedTextViewId"
+                                style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/to_do_fragment_planned_text_view" />
+
+                            <LinearLayout
+                                android:id="@+id/todoFragmentPlannedThirdLLInsideLowLinearLayoutId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/todoFragmentPlansCountTextViewId"
+                                    style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/to_do_fragment_plans_count_text_view" />
+
+                                <TextView
+                                    android:id="@+id/todoFragmentPlansTextViewId"
+                                    style="@style/todoFragmentLowLinearLayoutTextViewStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/to_do_fragment_plan_for_today_text_view" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/archivedActivityWholeUIRelativeLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AllTransactionsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/archivedActivityAllTransactionsTopCardViewId"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/archivedActivityArchivedEntriesTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/archived_activity_archived_entries_text_view"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/archivedActivityRecyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/archivedActivityAllTransactionsTopCardViewId"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/archivedActivityNoItemArchivedTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/archived_activity_no_item_archived_text_view"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/archivedActivityExportEntriesButtonId"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/custom_button_background"
+        android:text="@string/archived_activity_unarchive_entry_button"
+        android:textSize="25sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

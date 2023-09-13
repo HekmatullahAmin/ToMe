@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timeTableFragmentWholeUIRelativeLayoutId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".fragments.TimeTableFragment">
+
+    <include
+        android:id="@+id/timeTableFragmentToolbarId"
+        layout="@layout/custom_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/timeTableFragmentTopLinearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTableFragmentToolbarId"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/timeTableFragmentTopLinearLayoutRecyclerViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/timeTableFragmentLowLinearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/timeTableFragmentTopLinearLayoutId"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_top_right_and_left_round_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/timeTableFragmentClickDayOfTheWeekTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeTableFragmentTopLinearLayoutId"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/time_table_fragment_click_day_of_the_week_text_view"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/timeTableFragmentHorizontalScrollViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/timeTableFragmentThirdLLInsideLowLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp">
+
+                <Button
+                    android:id="@+id/timeTableFragmentSaturdayButtonId"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_2"
+                    android:text="@string/time_table_fragment_saturday_button"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/timeTableFragmentSundayButtonId"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/red_2"
+                    android:text="@string/time_table_fragment_sunday_button"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/timeTableFragmentMondayButtonId"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/yellow"
+                    android:text="@string/time_table_fragment_monday_button"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/timeTableFragmentTuesdayButtonId"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/pink"
+                    android:text="@string/time_table_fragment_tuesday_button"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/timeTableFragmentWednesdayButtonId"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/green_2"
+                    android:text="@string/time_table_fragment_wednesday_button"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/timeTableFragmentThursdayButtonId"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/orange"
+                    android:text="@string/time_table_fragment_thursday_button"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/timeTableFragmentFridayButtonId"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/blue_2"
+                    android:text="@string/time_table_fragment_friday_button"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/timeTableFragmentCardViewId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/timeTableFragmentLowLinearLayoutRecyclerViewId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/timeTableFragmentAddScheduleFloatingActionButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabCustomSize="70dp"
+        app:maxImageSize="40dp" />
+
+    <TextView
+        android:id="@+id/timeTableFragmentAddScheduleTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTableFragmentAddScheduleFloatingActionButtonId"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/time_table_fragment_add_schedule_textView"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</RelativeLayout>
