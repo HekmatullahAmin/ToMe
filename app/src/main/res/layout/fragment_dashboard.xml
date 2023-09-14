@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".fragments.DashboardFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dashboardCardViewId"
+        style="@style/calculationFragmentCardViewCornersStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@color/purple_50"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/dashboardFirstLinearLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/dashboardYouWillGetLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_purple_rectangle_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dashboardFragmentYouWillGetTextViewId"
+                    style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/dashboard_fragment_you_will_get_textView" />
+
+                <TextView
+                    android:id="@+id/dashboardFragmentReceiveCurrencySymbolTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/currency_symbol_text_view"
+                    android:textSize="15sp" />
+
+                <ScrollView
+                    android:id="@+id/dashboardFragmentReceiveMoneyScrollViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/dashboardFragmentTotalIncomeTextViewId"
+                        style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/dashboard_fragment_total_income_textView"
+                        android:textColor="@color/green" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dashboardFragmentThirdLLInsideMainLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_purple_rectangle_border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dashboardFragmentYouWillGiveTextViewId"
+                    style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/dashboard_fragment_you_will_give_textView" />
+
+                <TextView
+                    android:id="@+id/dashboardFragmentLossCurrencySymbolTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/currency_symbol_text_view"
+                    android:textSize="15sp" />
+
+                <ScrollView
+                    android:id="@+id/dashboardFragmentLossMoneyScrollViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/dashboardFragmentTotalLossTextViewId"
+                        style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/dashboard_fragment_total_loss_textView"
+                        android:textColor="@color/red" />
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dashboardFragmentFriendsDetailsLinearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/purple_50"
+        app:cardCornerRadius="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dashboardFragmentFriendsDetailsRecyclerViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

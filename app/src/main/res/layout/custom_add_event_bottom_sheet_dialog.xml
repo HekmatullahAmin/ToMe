@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customAddEventBottomSheetDialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_bottom_sheet_dialog_background"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customAddEventBottomSheetDialogTypeEventTextInputLayoutId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/custom_add_plan_bottom_sheet_dialog_type_event_text_input_layout"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/event">
+
+        <EditText
+            android:id="@+id/customAddEventBottomSheetDialogTypeEventEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/customAddEventBottomSheetDialogPickDateTextViewId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_text_view_border"
+        android:drawableStart="@drawable/ic_baseline_event_24"
+        android:drawablePadding="15dp"
+        android:hint="@string/custom_add_plan_bottom_sheet_dialog_pick_date_text_input_layout"
+        android:padding="15dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/customAddEventBottomSheetDialogPickTimeTextViewId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_text_view_border"
+        android:drawableStart="@drawable/ic_baseline_schedule_24"
+        android:drawablePadding="15dp"
+        android:hint="@string/custom_add_plan_bottom_sheet_dialog_pick_time_text_input_layout"
+        android:padding="15dp"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/customAddEventBottomSheetDialogAddEventButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/custom_add_plan_bottom_sheet_dialog_add_event_button" />
+</LinearLayout>

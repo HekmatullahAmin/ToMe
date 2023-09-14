@@ -1,104 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/customEntryRowMainUiRelativeLayoutId"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
 
-    <RelativeLayout
-        android:id="@+id/customEntryRowFirstRelativeLayoutId"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/customEntryRowCheckBoxCircleImageViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_baseline_done_24"
+        android:visibility="gone"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="2dp" />
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/customEntryRowSwipeRevealLayoutId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        app:dragEdge="right"
+        app:mode="same_level">
 
+        <!-- Your secondary layout here -->
         <LinearLayout
-            android:id="@+id/customEntryRowFirstLinearLayoutId"
+            android:id="@+id/customEntryRowSwipeItemsLinearLayoutId"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/customEntryRowDateAndTimeTextViewId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/custom_entry_row_date_and_time_text_view"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/customEntryRowItemNameTextViewId"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/custom_entry_row_item_name_text_view"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/customEntryRowSecondLinearLayoutId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_toRightOf="@id/customEntryRowFirstLinearLayoutId">
-
-            <LinearLayout
-                android:id="@+id/customEntryRowThirdLinearLayoutId"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/customEntryRowYouWillGiveAmountColumnTextViewId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:gravity="center|right"
-                    android:text="@string/custom_entry_row_you_will_give_amount_column_text_view"
-                    android:textColor="@color/red" />
-
-                <TextView
-                    android:id="@+id/customEntryRowAmountLostCurrencySymbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="@string/currency_symbol_text_view" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/customEntryRowFourthLinearLayoutId"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/customEntryRowYouWillGetAmountColumnTextViewId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginRight="5dp"
-                    android:layout_weight="1"
-                    android:gravity="center|right"
-                    android:text="@string/custom_entry_row_you_will_get_amount_column_text_view"
-                    android:textColor="@color/green" />
-
-                <TextView
-                    android:id="@+id/customEntryRowAmountGainCurrencySymbol"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="@string/currency_symbol_text_view" />
-            </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/customEntryRowCheckBoxId"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/customEntryRowArchiveImageViewIdId"
+                android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:visibility="gone" />
+                android:background="@color/green"
+                android:padding="20dp"
+                android:src="@drawable/ic_baseline_archive_24" />
+
+            <ImageView
+                android:id="@+id/customEntryRowEditImageViewIdId"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/blue_600"
+                android:padding="20dp"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+            <ImageView
+                android:id="@+id/customEntryRowDeleteImageViewIdId"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/red"
+                android:padding="20dp"
+                android:src="@drawable/ic_baseline_delete_24" />
         </LinearLayout>
-    </RelativeLayout>
-</RelativeLayout>
+
+        <!-- Your main layout here -->
+        <LinearLayout
+            android:id="@+id/customEntryRowLinearLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/customEntryRowFirstLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/customEntryRowDateAndTimeTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/custom_entry_row_date_and_time_text_view"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/customEntryRowItemNameTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/custom_entry_row_item_name_text_view"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/customEntryRowSecondLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/customEntryRowFirstLinearLayoutId"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/customEntryRowThirdLinearLayoutId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/customEntryRowYouWillGiveAmountColumnTextViewId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="@string/custom_entry_row_you_will_give_amount_column_text_view"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/customEntryRowAmountLostCurrencySymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/currency_symbol_text_view" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/customEntryRowFourthLinearLayoutId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/customEntryRowYouWillGetAmountColumnTextViewId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:text="@string/custom_entry_row_you_will_get_amount_column_text_view"
+                        android:textColor="@color/green" />
+
+                    <TextView
+                        android:id="@+id/customEntryRowAmountGainCurrencySymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/currency_symbol_text_view" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+</androidx.cardview.widget.CardView>

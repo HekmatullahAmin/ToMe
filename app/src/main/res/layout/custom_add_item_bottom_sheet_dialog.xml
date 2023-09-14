@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/customAddTaskBottomSheetDialogId"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/custom_top_right_and_left_round_background"
+    android:background="@drawable/custom_bottom_sheet_dialog_background"
     android:orientation="vertical"
     android:padding="10dp">
-
 
     <TextView
         android:id="@+id/customAddItemBottomSheetDialogTitleTextViewId"
@@ -23,27 +23,35 @@
         android:layout_marginTop="5dp"
         android:src="@drawable/custom_primary_dark_line" />
 
-    <EditText
-        android:id="@+id/customAddItemBottomSheetDialogTypeItemNameEditTextId"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customAddItemBottomSheetDialogTypeItemNameTextInputLayoutId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_accent_rectangle_border"
-        android:hint="@string/custom_add_item_bottom_sheet_dialog_item_name_edit_text"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        android:layout_marginTop="5dp"
+        android:hint="@string/custom_add_friend_bottom_sheet_dialog_type_item_name_input_layout"
+        app:endIconMode="clear_text">
 
-    <EditText
-        android:id="@+id/customAddItemBottomSheetDialogTypeItemAmountEditTextId"
+        <EditText
+            android:id="@+id/customAddItemBottomSheetDialogTypeItemNameEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customAddItemBottomSheetDialogTypeItemAmountTextInputLayoutId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/custom_accent_rectangle_border"
-        android:hint="@string/custom_add_item_bottom_sheet_dialog_item_amount_edit_text"
-        android:inputType="numberDecimal"
-        android:maxLength="16"
-        android:padding="10dp"
-        android:textSize="20sp" />
+        android:hint="@string/custom_add_friend_bottom_sheet_dialog_type_item_amount_input_layout"
+        app:endIconMode="clear_text">
+
+        <EditText
+            android:id="@+id/customAddItemBottomSheetDialogTypeItemAmountEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
         android:layout_width="match_parent"

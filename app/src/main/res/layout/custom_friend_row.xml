@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customFriendRowCardViewId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
+
+    <com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/customFriendRowSwipeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dragEdge="right"
+        app:mode="same_level">
+
+        <!-- Your secondary layout here -->
+        <LinearLayout
+            android:id="@+id/customEntryRowSwipeItemsLinearLayoutId"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/customFriendRowEditImageViewIdId"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/blue_600"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+            <ImageView
+                android:id="@+id/customFriendRowDeleteImageViewIdId"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/red"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_delete_24" />
+        </LinearLayout>
+
+        <!-- Your main layout here -->
+        <RelativeLayout
+            android:id="@+id/customFriendRowMainUiRelativeLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/customFriendRowPersonNameTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_friend_row_person_name_text_view"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/customFriendRowCurrencySymbolTextViewId"
+                style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/customFriendRowFromPersonYouWillGetOrGiveAmountTextViewId"
+                android:layout_alignParentRight="true"
+                android:text="@string/currency_symbol_text_view" />
+
+            <TextView
+                android:id="@+id/customFriendRowFromPersonYouWillGetOrGiveAmountTextViewId"
+                style="@style/calculationFragmentMainLinearLayoutTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/customFriendRowCurrencySymbolTextViewId"
+                android:layout_toRightOf="@id/customFriendRowPersonNameTextViewId"
+                android:gravity="right"
+                android:text="@string/custom_friend_row_from_person_you_will_get_amount_text_view" />
+
+            <TextView
+                android:id="@+id/customFriendRowFromPersonYouWillGetOrGiveTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/customFriendRowFromPersonYouWillGetOrGiveAmountTextViewId"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/custom_friend_row_from_person_you_will_get_text_view" />
+        </RelativeLayout>
+    </com.chauthai.swipereveallayout.SwipeRevealLayout>
+</androidx.cardview.widget.CardView>
+

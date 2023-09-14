@@ -2,16 +2,18 @@ package com.hekmatullahamin.plan.model;
 
 public class Plan {
     private int planId, planState = 0;
-    private long planDate, planNotificationId;
+    private long planDate, planDateAndTime, planNotificationId;
     private String planNote;
 
     public Plan() {
     }
 
-    public Plan(int planId, int planState, long planDate, String planNote) {
+    public Plan(int planId, int planState, long planDate, long planDateAndTime, long planNotificationId, String planNote) {
         this.planId = planId;
         this.planState = planState;
         this.planDate = planDate;
+        this.planDateAndTime = planDateAndTime;
+        this.planNotificationId = planNotificationId;
         this.planNote = planNote;
     }
 
@@ -53,5 +55,13 @@ public class Plan {
 
     public void setPlanNote(String planNote) {
         this.planNote = planNote;
+    }
+
+    public long getPlanDateAndTime() {
+        return planDateAndTime;
+    }
+
+    public void setPlanDateAndTime(long planDateAndTime) {
+        this.planDateAndTime = planDateAndTime;
     }
 }

@@ -3,13 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/customEntryActivityMenuUnarchiveItemId"
-        android:icon="@drawable/ic_baseline_unarchive_30"
+        android:icon="@drawable/ic_baseline_archive_24"
         android:title="@string/custom_entry_activity_menu_unarchive_item"
-        app:showAsAction="always" />
-
-    <item
-        android:id="@+id/customEntryActivityMenuEditNameId"
-        android:icon="@drawable/editor"
-        android:title="@string/custom_entry_activity_menu_edit_item"
-        app:showAsAction="always" />
+        app:showAsAction="never" />
 </menu>

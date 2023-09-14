@@ -3,5 +3,5 @@
     android:id="@+id/customToolbarId"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     android:theme="@style/ThemeOverlay.AppCompat.Light"></androidx.appcompat.widget.Toolbar>

@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#dceae7</color>
-    <color name="colorPrimaryDark">#f4d876</color>
-    <color name="colorAccent">#d4d2c4</color>
+<!--    <color name="colorPrimary">#dceae7</color>-->
+<!--    <color name="colorPrimaryDark">#f4d876</color>-->
+<!--    <color name="colorAccent">#d4d2c4</color>-->
+
+    <color name="colorPrimary">#FF6200EE</color>
+    <color name="colorPrimaryDark">#FF3700B3</color>
+    <color name="colorAccent">#FFBB86FC</color>
+    <color name="purple_50">#EFE5FD</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 
     <!--    money receive and money lost colors-->
     <color name="purple">#800080</color>
     <color name="red">#ff0000</color>
     <color name="green">#008000</color>
+
     <!--    colors for button and swipe-->
     <color name="purple_2">#DC55DC</color>
     <color name="red_2">#DD3D3D</color>
-    <color name="yellow">#F8F824</color>
-    <color name="pink">#ffc0cb</color>
-    <color name="green_2">#aefd6c</color>
-    <color name="orange">#F8AA1B</color>
-    <color name="blue">#00bfff</color>
     <color name="blue_2">#d0fefe</color>
-    <color name="gray">#DCDCDC</color>
-    <color name="white">#FFFFFF</color>
+
+    <color name="orange_400">#FFA726</color>
+    <color name="orange_900">#E65100</color>
+    <color name="amber_900">#FF6F00</color>
+    <color name="yellow_600">#FDD835</color>
+    <color name="yellow_900">#F57F17</color>
+    <color name="brown">#964B00</color>
+    <color name="teal_300">#4DB6AC</color>
+    <color name="blue_600">#1E88E5</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="pink">#EC8FD0</color>
+
 </resources>
 
 

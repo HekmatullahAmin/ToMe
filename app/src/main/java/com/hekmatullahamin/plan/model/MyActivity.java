@@ -1,18 +1,27 @@
 package com.hekmatullahamin.plan.model;
 
-public class MyActivity {
-    private int activityId;
-    private String activityName, activityFromTime, activityToTime, activityDayOfTheWeek;
+import java.io.Serializable;
+
+public class MyActivity implements Serializable {
+    private int activityId, activityTagColor, activityTagImage;
+    private String activityDescription, activityFromTime, activityToTime, activityDayOfTheWeek, activityTagName;
+    private Long activityFromTimeLong;
 
     public MyActivity() {
     }
 
-    public MyActivity(int activityId, String activityName, String activityFromTime, String activityToTime, String activityDayOfTheWeek) {
+    public MyActivity(int activityId, int activityTagColor, int activityTagImage, String activityDescription,
+                      String activityFromTime, String activityToTime, String activityDayOfTheWeek, String activityTagName,
+                      Long activityFromTimeLong) {
         this.activityId = activityId;
-        this.activityName = activityName;
+        this.activityTagColor = activityTagColor;
+        this.activityTagImage = activityTagImage;
+        this.activityDescription = activityDescription;
         this.activityFromTime = activityFromTime;
         this.activityToTime = activityToTime;
         this.activityDayOfTheWeek = activityDayOfTheWeek;
+        this.activityTagName = activityTagName;
+        this.activityFromTimeLong = activityFromTimeLong;
     }
 
     public int getActivityId() {
@@ -23,12 +32,12 @@ public class MyActivity {
         this.activityId = activityId;
     }
 
-    public String getActivityName() {
-        return activityName;
+    public String getActivityDescription() {
+        return activityDescription;
     }
 
-    public void setActivityName(String activityName) {
-        this.activityName = activityName;
+    public void setActivityDescription(String activityDescription) {
+        this.activityDescription = activityDescription;
     }
 
     public String getActivityFromTime() {
@@ -53,5 +62,37 @@ public class MyActivity {
 
     public void setActivityDayOfTheWeek(String activityDayOfTheWeek) {
         this.activityDayOfTheWeek = activityDayOfTheWeek;
+    }
+
+    public String getActivityTagName() {
+        return activityTagName;
+    }
+
+    public void setActivityTagName(String activityTagName) {
+        this.activityTagName = activityTagName;
+    }
+
+    public int getActivityTagColor() {
+        return activityTagColor;
+    }
+
+    public void setActivityTagColor(int activityTagColor) {
+        this.activityTagColor = activityTagColor;
+    }
+
+    public int getActivityTagImage() {
+        return activityTagImage;
+    }
+
+    public void setActivityTagImage(int activityTagImage) {
+        this.activityTagImage = activityTagImage;
+    }
+
+    public Long getActivityFromTimeLong() {
+        return activityFromTimeLong;
+    }
+
+    public void setActivityFromTimeLong(Long activityFromTimeLong) {
+        this.activityFromTimeLong = activityFromTimeLong;
     }
 }

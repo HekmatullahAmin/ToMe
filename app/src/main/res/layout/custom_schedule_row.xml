@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/customScheduleRowTopRelativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/customScheduleRowTopRelativeLayoutFromTimeTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_schedule_row_from_date_text_view" />
+
+        <TextView
+            android:id="@+id/customScheduleRowTopRelativeLayoutDifferenceOfFromToToTimeTextViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customScheduleRowTopRelativeLayoutFromTimeTextViewId"
+            android:layout_toRightOf="@id/customScheduleRowTopRelativeLayoutFromTimeTextViewId"
+            android:background="@drawable/custom_text_view_border"
+            android:padding="5dp"
+            android:paddingStart="15dp"
+            android:text="@string/day_of_the_week_fragment_amount_of_time_remained_text_view"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/customScheduleRowTopRelativeLayoutToTimeTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customScheduleRowTopRelativeLayoutDifferenceOfFromToToTimeTextViewId"
+            android:text="@string/custom_schedule_row_to_date_text_view" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/customScheduleRowFromTimeTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customScheduleRowTopRelativeLayoutId"
+        android:layout_marginTop="5dp"
+        android:text="@string/custom_schedule_row_from_date_text_view" />
+
+    <LinearLayout
+        android:id="@+id/customScheduleRowLinearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customScheduleRowFromTimeTextViewId"
+        android:layout_toRightOf="@id/customScheduleRowFromTimeTextViewId"
+        android:background="@drawable/custom_text_view_border"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:paddingStart="15dp">
+
+        <RelativeLayout
+            android:id="@+id/customScheduleRowTagRelativeLayoutId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customScheduleRowTagCardViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:id="@+id/customScheduleRowTagLinearLayoutId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/customScheduleRowTagImageViewId"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_baseline_free_break_24" />
+
+                    <TextView
+                        android:id="@+id/customScheduleRowTagNameTextViewId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="Break"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/customScheduleRowDescriptionTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="2dp"
+            android:text="@string/custom_schedule_row_description_text_view" />
+
+        <TextView
+            android:id="@+id/customScheduleRowTimeTakenTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/custom_schedule_row_time_taken_text_view" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/customScheduleRowToTimeTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customScheduleRowLinearLayoutId"
+        android:text="@string/custom_schedule_row_to_date_text_view" />
+</RelativeLayout>

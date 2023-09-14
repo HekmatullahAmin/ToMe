@@ -2,6 +2,8 @@ package com.hekmatullahamin.plan.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,6 +15,7 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.hekmatullahamin.plan.R;
 import com.hekmatullahamin.plan.utils.Constants;
@@ -28,6 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
     private EditText enteredNameET, enteredCurrencyET;
     private Button saveButton;
 
+    private Toolbar toolbar;
     private Uri croppedUri;
     private SharedPreferences mySettingPreferences;
 
@@ -66,6 +70,26 @@ public class SettingsActivity extends AppCompatActivity {
         enteredCurrencyET = findViewById(R.id.settingsActivityEnterCurrencyEditTextId);
         saveButton = findViewById(R.id.settingsActivitySaveSettingsButtonId);
         mySettingPreferences = getSharedPreferences(Constants.MY_SETTING_PREFERENCE_NAME, MODE_PRIVATE);
+
+        toolbar = findViewById(R.id.settingsActivityToolbarId);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.white, null));
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Profile");
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        final Drawable upArrow = getResources().getDrawable(R.drawable.ic_baseline_arrow_back_white_24, null);
+        upArrow.setColorFilter(getResources().getColor(R.color.white, null), PorterDuff.Mode.SRC_ATOP);
+        getSupportActionBar().setHomeAsUpIndicator(upArrow);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
     }
 
     private void populateSettingsNameProfileCurrency() {

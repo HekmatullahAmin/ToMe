@@ -2,44 +2,42 @@ package com.hekmatullahamin.plan.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.hekmatullahamin.plan.fragments.CalculationFragment;
-import com.hekmatullahamin.plan.fragments.TimeTableFragment;
-import com.hekmatullahamin.plan.fragments.TodoFragment;
+import com.hekmatullahamin.plan.fragments.DashboardFragment;
+import com.hekmatullahamin.plan.fragments.FriendsFragment;
+import com.hekmatullahamin.plan.fragments.TransactionsFragment;
 
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class ViewPagerAdapter extends FragmentStateAdapter {
 
-    private final int numberOfTabs;
     private Fragment fragment = null;
 
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int numberOfTabs) {
-        super(fm);
-        this.numberOfTabs = numberOfTabs;
+    public ViewPagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
     }
+
 
     @NonNull
     @Override
-    public Fragment getItem(int position) {
-        fragment = new TodoFragment();
+    public Fragment createFragment(int position) {
+        fragment = new DashboardFragment();
         switch (position) {
             case 0:
-                fragment = new TodoFragment();
+                fragment = new DashboardFragment();
                 break;
             case 1:
-                fragment = new CalculationFragment();
+                fragment = new FriendsFragment();
                 break;
             case 2:
-                fragment = new TimeTableFragment();
+                fragment = new TransactionsFragment();
                 break;
         }
         return fragment;
     }
 
     @Override
-    public int getCount() {
-        return numberOfTabs;
+    public int getItemCount() {
+        return 3;
     }
-
 }

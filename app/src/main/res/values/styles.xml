@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!--    we can add Theme.AppCompat.Light.NoActionBar or Theme.MaterialComponents.NoActionBar -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!--    we can add Theme.AppCompat.Light.NoActionBar or Theme.MaterialComponents.Light.NoActionBar -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="floatingActionButtonStyle">@style/FabShapeOverlayStyle</item>
+        <!--        <item name="floatingActionButtonStyle">@style/FabShapeOverlayStyle</item>-->
         <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+        <item name="actionModeStyle">@style/ActionModeStyle</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyCustomThemeOverFlow</item>
+    </style>
+    
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!--    for more option main activity image-->
+    <style name="MyCustomThemeOverFlow">
+        <item name="android:src">@drawable/ic_baseline_more_vert_24</item>
+    </style>
+
+    <!--    to set action mode text to white-->
+    <style name="ActionModeStyle" parent="@style/Widget.AppCompat.ActionMode">
+        <item name="background">@color/colorPrimary</item>
+        <item name="titleTextStyle">@style/ActionModeTitleTextStyle</item>
+    </style>
+
+    <style name="ActionModeTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <!--    for putting divider in between menu items-->
@@ -53,7 +75,7 @@
     <!--    for rating bar color-->
     <style name="RatingBar" parent="Theme.AppCompat">
         <item name="colorControlNormal">@color/colorPrimary</item>
-        <item name="colorControlActivated">@color/orange</item>
+        <item name="colorControlActivated">@color/orange_400</item>
     </style>
 
     <style name="todoFragmentTopLinearLayoutTextViewStyle">
@@ -73,7 +95,7 @@
     </style>
 
     <style name="calculationFragmentMainLinearLayoutTextViewStyle">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
     <style name="calculationFragmentCardViewCornersStyle">

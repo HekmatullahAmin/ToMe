@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".fragments.FriendsFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/friendsFragmentTextInputLayoutId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:hint="@string/calculation_fragment_search_friend_text_input_layout"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_baseline_person_search_24">
+
+        <EditText
+            android:id="@+id/friendsFragmentSearchPersonEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/friendsFragmentRecyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/friendsFragmentTextInputLayoutId"
+        android:layout_marginTop="10dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/friendsFragmentAddPersonFABId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        app:backgroundTint="@android:color/transparent"
+        app:elevation="1dp"
+        app:srcCompat="@drawable/ic_baseline_person_add_24" />
+</RelativeLayout>

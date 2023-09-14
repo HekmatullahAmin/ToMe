@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PlansActivity"
+    tools:deviceIds="wear">
+
+    <include
+        android:id="@+id/plansActivityToolbarId"
+        layout="@layout/custom_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/plansActivityToolbarId"
+        android:padding="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/plansActivityCalendarCardViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/purple_50"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp">
+
+            <CalendarView
+                android:id="@+id/plansActivityCalendarViewId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/plansActivityRecyclerViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/plansActivityCalendarCardViewId" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/plansActivityNoEventCardViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/plansActivityCalendarCardViewId"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/purple_50"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:id="@+id/plansActivityNoEventCardViewLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/plans_activity_no_event_text_view_id"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/plansActivityNoEventDateTextViewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/plans_activity_no_event_date_text_view_id"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/plansActivityAddEventFloatingActionButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            app:backgroundTint="@android:color/transparent"
+            app:elevation="1dp"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
+    </RelativeLayout>
+</RelativeLayout>

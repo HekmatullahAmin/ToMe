@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DayOfTheWeekFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/dayOfTheWeekFragmentAppBarLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/dayOfTheWeekFragmentCollapsingToolbarLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:expandedTitleGravity="center"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/dayOfTheWeekFragmentToolbarId"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/dayOfTheWeekFragmentNestedScrollViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/dayOfTheWeekFragmentRecyclerViewLinearLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dayOfTheWeekFragmentRecyclerViewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dayOfTheWeekFragmentRecyclerViewId"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/dayOfTheWeekFragmentBottomRelativeLayoutId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/dayOfTheWeekFragmentBottomRelativeLayoutFromTimeTextViewId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/custom_schedule_row_from_date_text_view" />
+
+                    <TextView
+                        android:id="@+id/dayOfTheWeekFragmentBottomRelativeLayoutAmountOfTimeRemainedTextViewId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dayOfTheWeekFragmentBottomRelativeLayoutFromTimeTextViewId"
+                        android:layout_toRightOf="@id/dayOfTheWeekFragmentBottomRelativeLayoutFromTimeTextViewId"
+                        android:background="@drawable/custom_text_view_border"
+                        android:padding="5dp"
+                        android:paddingStart="15dp"
+                        android:text="@string/day_of_the_week_fragment_amount_of_time_remained_text_view"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/dayOfTheWeekFragmentBottomRelativeLayoutToTimeTextViewId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dayOfTheWeekFragmentBottomRelativeLayoutAmountOfTimeRemainedTextViewId"
+                        android:text="@string/custom_schedule_row_to_date_text_view" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

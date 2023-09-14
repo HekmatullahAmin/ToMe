@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".fragments.TransactionsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fragmentTransactionsTopCardViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@color/purple_50"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/fragmentTransactionsFirstLinearLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/fragmentTransactionsSecondRelativeLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fragmentTransactionsTotalSpentTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_transactions_activity_total_spent_text_view"
+                    android:textSize="20sp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_toLeftOf="@id/fragmentTransactionsSpentAmountCurrencySymbolTextViewId"
+                    android:layout_toRightOf="@id/fragmentTransactionsTotalSpentTextViewId">
+
+                    <TextView
+                        android:id="@+id/fragmentTransactionsTotalSpentAmountTextViewId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right"
+                        android:text="@string/all_transactions_activity_total_spent_amount_text_view"
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/fragmentTransactionsSpentAmountCurrencySymbolTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/fragmentTransactionsTotalSpentTextViewId"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/currency_symbol_text_view" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragmentTransactionsThirdRelativeLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fragmentTransactionsTotalReceivedTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/all_transactions_activity_total_received_text_view"
+                    android:textSize="20sp" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_toLeftOf="@id/fragmentTransactionsReceivedAmountCurrencySymbolTextViewId"
+                    android:layout_toRightOf="@id/fragmentTransactionsTotalReceivedTextViewId">
+
+                    <TextView
+                        android:id="@+id/fragmentTransactionsTotalReceivedAmountTextViewId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right"
+                        android:text="@string/all_transactions_activity_total_received_amount_text_view"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/fragmentTransactionsReceivedAmountCurrencySymbolTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/fragmentTransactionsTotalReceivedTextViewId"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/currency_symbol_text_view" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragmentTransactionsRecyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fragmentTransactionsTopCardViewId" />
+</RelativeLayout>

@@ -30,14 +30,11 @@ Schedule:
 
 Helps you for managing your school, university or work life by adding your full week schedule.
 
--------
-
-# ToMe
-<img src="/images/1.png" width="200" height="400" />
-<img src="/images/2.jpg" width="200" height="400" />
-<img src="/images/3.jpg" width="200" height="400" />
-<img src="/images/4.jpg" width="200" height="400" />
-<img src="/images/5.jpg" width="200" height="400" />
-<img src="/images/6.jpg" width="200" height="400" />
-<img src="/images/7.jpg" width="200" height="400" />
-<img src="/images/8.jpg" width="200" height="400" />
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/2bfd11b5-a0b4-4809-a568-87fa81bdc966" width="300" height="500">
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/0a9a19fa-22cc-433b-bbd3-3d3602fd28b7" width="300" height="500">
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/865f3aa8-caa5-4af4-a058-b9722d6429f4" width="300" height="500">
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/31439e0c-0e2e-4b7f-8f9c-7021cbf2b07f" width="300" height="500">
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/8cb11236-44e7-4d34-bb01-1524c7b2b54f" width="300" height="500">
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/23edcdc7-863d-4d8f-a407-1eba6cb59873" width="300" height="500">
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/fd14bf90-552b-4f09-947b-593c856ecb7e" width="300" height="500">
+<img src="https://github.com/HekmatullahAmin/ToMe/assets/71514091/6f450a10-28ba-4341-acf6-c6071caebca6" width="300" height="500">

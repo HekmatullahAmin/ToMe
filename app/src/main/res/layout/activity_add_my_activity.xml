@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddMyActivityActivity">
+
+    <LinearLayout
+        android:id="@+id/addMyActivityTopActionBarRelativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/addMyActivityCloseActivityImageViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_baseline_close_white_24" />
+
+        <TextView
+            android:id="@+id/addMyActivityActionBarTitleTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text="@string/add_my_activity_new_record_text_view"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/addMyActivityDeleteImageViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_baseline_delete_24"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/addMyActivitySaveActivityImageViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_baseline_done_white_24" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addMyActivityTopActionBarRelativeLayoutId"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/addMyActivityDayOfTheWeekTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_my_activity_day_of_the_week_text_view"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addMyActivityDescriptionTextInputLayoutId"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addMyActivityDayOfTheWeekTextViewId"
+            android:layout_marginTop="10dp"
+            android:hint="@string/add_my_activity_description_text_input_layout">
+
+            <EditText
+                android:id="@+id/addMyActivityDescriptionEditTextId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/addMyActivityTimeLinearLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addMyActivityDescriptionTextInputLayoutId"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/addMyActivityStartTimeTextInputLayoutId"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_text_view_border"
+                android:drawableStart="@drawable/ic_baseline_schedule_24"
+                android:drawablePadding="5dp"
+                android:padding="20dp"
+                android:text="@string/add_my_activity_start_time_text_view"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/addMyActivityEndTimeTextInputLayoutId"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_text_view_border"
+                android:drawableStart="@drawable/ic_baseline_schedule_24"
+                android:drawablePadding="5dp"
+                android:padding="20dp"
+                android:text="@string/add_my_activity_end_time_text_view"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addMyActivitySelectedTagCardViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addMyActivityTimeLinearLayoutId"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/brown"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:id="@+id/addMyActivitySelectedTagLinearLayoutId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/addMyActivitySelectedTagImageViewId"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_free_break_24" />
+
+                <TextView
+                    android:id="@+id/addMyActivitySelectedTagTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Break"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addMyActivitySelectedTagCardViewId"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/purple_50"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:id="@+id/addMyActivityTagsLinearLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/addMyActivityTagTextViewId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addMyActivityTimeLinearLayoutId"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/add_my_activity_tag_text_view"
+                    android:textSize="20sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:columnCount="3"
+                        android:rowCount="4">
+
+                        <include
+                            android:id="@+id/addMyActivityTagBreakId"
+                            layout="@layout/custom_tag_break"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+
+                            android:layout_column="0" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagTravelId"
+                            layout="@layout/custom_tag_travel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+
+                            android:layout_column="1" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagEatingId"
+                            layout="@layout/custom_tag_eating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="0"
+
+                            android:layout_column="2" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagHouseworkId"
+                            layout="@layout/custom_tag_house_work"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+
+                            android:layout_column="0" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagInternetId"
+                            layout="@layout/custom_tag_internet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+
+                            android:layout_column="1" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagGameId"
+                            layout="@layout/custom_tag_game"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="1"
+
+                            android:layout_column="2" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagRelationshipId"
+                            layout="@layout/custom_tag_relationship"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="2"
+
+                            android:layout_column="0" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagSleepId"
+                            layout="@layout/custom_tag_sleep"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="2"
+
+                            android:layout_column="1" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagStudyingId"
+                            layout="@layout/custom_tag_studying"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="2"
+
+                            android:layout_column="2" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagSportId"
+                            layout="@layout/custom_tag_sport"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="3"
+
+                            android:layout_column="0" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagTVId"
+                            layout="@layout/custom_tag_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="3"
+
+                            android:layout_column="1" />
+
+                        <include
+                            android:id="@+id/addMyActivityTagWorkId"
+                            layout="@layout/custom_tag_work"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_row="3"
+
+                            android:layout_column="2" />
+                    </GridLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>
